@@ -1,0 +1,26 @@
+.site-header {
+	a {
+		color: $white;
+
+		@media screen and (min-width: $large) {
+			color: $black;
+		}
+	}
+}
+
+div.site-custom-header {
+	min-height: 10vw;
+	background-color: $light-gray;
+}
+
+figure.site-custom-header {
+	background-size: cover;
+	background-position: center;
+	margin: 0;
+	width: 100%;
+	height: 25vw;
+
+	img {
+		visibility: hidden;
+	}
+}

@@ -1,0 +1,85 @@
+/* Forms
+--------------------------------------------- */
+label {
+	display: block;
+	text-transform: uppercase;
+	font-size: rem(12);
+	letter-spacing: 2px;
+	color: $medium-gray;
+	margin-bottom: rem(4);
+
+	input[type="checkbox"] + & {
+		text-transform: none;
+		letter-spacing: 0;
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: $input-color;
+	border: 1px solid $input-border-color;
+	background-color: $input-background-color;
+	border-radius: $input-radius;
+	padding: $input-padding;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: $input-focus-color;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/* ## Password Protect Form ===== */
+.post-password-form {
+	p {
+		display: flex;
+	}
+
+	label {
+		margin-bottom: 0;
+	}
+}
+
+/* ## Search Form ===== */
+.search-form {
+	display: flex;
+
+	label {
+		margin-bottom: 0;
+	}
+}

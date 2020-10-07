@@ -1,0 +1,64 @@
+.wp-block-archives,
+.wp-block-button,
+.wp-block-buttons,
+.wp-block-calendar,
+.wp-block-categories,
+.wp-block-code,
+.wp-block-columns,
+.wp-block-cover,
+.wp-block-cover-image,
+.wp-block-embed,
+.wp-block-file,
+.wp-block-gallery,
+.wp-block-group,
+.wp-block-image,
+.wp-block-latest-comments,
+.wp-block-latest-posts,
+.wp-block-media-text,
+.wp-block-preformatted,
+.wp-block-pullquote,
+.wp-block-quote,
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large,
+.wp-block-search,
+.wp-block-social,
+.wp-block-tag-cloud,
+.wp-block-verse,
+.wp-block-video {
+	margin: $global-padding * 2 0;
+}
+
+/* Individual Blocks
+--------------------------------------------- */
+.wp-block-quote {
+	&.is-large,
+	&.is-style-large {
+		padding: $global-padding * 2;
+	}
+}
+
+.wp-block-pullquote {
+	margin: 0;
+	padding: $global-padding 0;
+
+	&.has-background {
+		blockquote {
+			background-color: transparent;
+		}
+	}
+
+	cite {
+		color: $medium-gray;
+	}
+}
+
+.wp-block-cover,
+.wp-block-cover-image {
+	color: $white;
+}
+
+.wp-block-latest-posts {
+	li {
+		margin-bottom: $global-padding;
+	}
+}

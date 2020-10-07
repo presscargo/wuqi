@@ -1,0 +1,28 @@
+/* Buttons
+--------------------------------------------- */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+	border: 1px solid;
+	border-color: $button-border-color;
+	border-radius: $button-radius;
+	background: $button-background;
+	color: $button-color;
+	line-height: 1;
+	padding: $button-padding;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: rem(12);
+	font-weight: 700;
+
+	&:hover {
+		border-color: $button-hover-border-color;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $button-active-border-color;
+	}
+}

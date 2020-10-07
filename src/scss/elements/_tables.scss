@@ -1,0 +1,17 @@
+/* Tables
+--------------------------------------------- */
+table {
+	margin: 0 0 $paragraph-margin-bottom;
+	width: 100%;
+	border-collapse: collapse;
+
+	th,
+	td {
+		border: 1px solid $light-gray;
+		padding: 0.5rem;
+	}
+
+	th {
+		background-color: #fafafa;
+	}
+}
