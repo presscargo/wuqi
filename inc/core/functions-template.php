@@ -161,5 +161,3 @@ function wuqi_excerpt_length( $length ) {
 	return 40;
 }
 add_filter( 'excerpt_length', 'wuqi_excerpt_length', 999 );
-
-add_filter( 'tc_skip_development_directories', '__return_true' );
