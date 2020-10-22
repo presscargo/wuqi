@@ -209,6 +209,23 @@ final class Wuqi {
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		add_theme_support( 'starter-content', array(
+			'widgets' => array(
+				'primary' => array(
+					'search_primary' => array( 'search', array() ),
+					'recent_primary' => array( 'recent-posts', array(
+						'title' => 'Recent Posts',
+					) ),
+				),
+				'secondary' => array(
+					'search_secondary' => array( 'search', array() ),
+					'recent_secondary' => array( 'recent-posts', array(
+						'title' => 'Recent Posts',
+					) ),
+				),
+			)
+		) );
+
 		// Handle content width for embeds and images.
 		$GLOBALS['content_width'] = apply_filters( 'wuqi_content_width', 640 );
 	}
