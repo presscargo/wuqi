@@ -720,13 +720,13 @@ final class Get_The_Image {
 		if ( false !== $this->args['link'] ) {
 
 			if ( 'post' === $this->args['link'] || true === $this->args['link'] )
-				$url = get_permalink( $this->args['post_id'] );
+				$url = esc_url( get_permalink( $this->args['post_id'] ) );
 
 			elseif ( 'file' === $this->args['link'] )
 				$url = $this->image_args['src'];
 
 			elseif ( 'attachment' === $this->args['link'] && isset( $this->image_args['id'] ) )
-				$url = get_permalink( $this->image_args['id'] );
+				$url = esc_url( get_permalink( $this->image_args['id'] ) );
 
 			if ( ! empty( $url ) ) {
 

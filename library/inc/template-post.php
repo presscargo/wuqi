@@ -49,7 +49,7 @@ function hybrid_post_format_link() {
 function hybrid_get_post_format_link() {
 
 	$format = get_post_format();
-	$url    = $format ? get_post_format_link( $format ) : get_permalink();
+	$url    = $format ? get_post_format_link( $format ) : esc_url( get_permalink() );
 
 	return sprintf( '<a href="%s" class="post-format-link">%s</a>', esc_url( $url ), get_post_format_string( $format ) );
 }

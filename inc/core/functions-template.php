@@ -19,12 +19,12 @@ function wuqi_body_classes( $classes ) {
 	}
 
 	if ( is_home() ) {
-		$classes[] = 'layout-' . get_theme_mod( 'blog_post_display', 'tiled' );
-		$classes[] = 'blog-post-first-thumbnail-' . get_theme_mod( 'blog_post_first_thumbnail', 'hidden' );
+		$classes[] = esc_attr( 'layout-' . get_theme_mod( 'blog_post_display', 'tiled' ) );
+		$classes[] = esc_attr( 'blog-post-first-thumbnail-' . get_theme_mod( 'blog_post_first_thumbnail', 'hidden' ) );
 	}
 
 	if ( is_archive() || is_search() ) {
-		$classes[] = 'layout-' . get_theme_mod( 'archive_post_display', 'tiled' );
+		$classes[] = esc_attr( 'layout-' . get_theme_mod( 'archive_post_display', 'tiled' ) );
 	}
 
 	return $classes;
@@ -136,20 +136,6 @@ function wuqi_nav_menu_arrow( $item_output, $item, $depth, $args ) {
 }
 add_filter( 'walker_nav_menu_start_el', 'wuqi_nav_menu_arrow', 10, 4 );
 
-
-/**
- * Filter the ellipses for the excerpt
- *
- * @since  1.0.0
- * @access public
- * @return string
- */
-function wuqi_excerpt_more( $more ) {
-	//return '<p class="read-more"><a class="button small" href="' . esc_url( get_permalink() ) . '">' . __( 'Read More', 'wuqi' ) . '</a></p>';
-	return '';
-}
-//add_filter( 'excerpt_more', 'wuqi_excerpt_more' );
-
 /**
  * Filter the excerpt length
  *
@@ -158,6 +144,10 @@ function wuqi_excerpt_more( $more ) {
  * @return int
  */
 function wuqi_excerpt_length( $length ) {
+	if ( is_admin() ) {
+		return $length;
+	}
+	
 	return 40;
 }
 add_filter( 'excerpt_length', 'wuqi_excerpt_length', 999 );
