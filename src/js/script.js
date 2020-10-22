@@ -1,8 +1,43 @@
 jQuery(document).ready(function($) {
 	/* Mobile Navigation */
-	$('.wuqi-dropdown-arrow').on('click', function() {
+	$('.wuqi-dropdown-arrow').on('click', function(e) {
+		e.preventDefault();
+		$(this).toggleClass('active');
 		$(this).next().slideToggle();
-	})
+	});
+
+	/* Focus Trapping */
+	trapFocus('#site-navigation');
+
+	function trapFocus(element) {
+		var focusableEls = $(element).find('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
+
+		var firstFocusableEl = focusableEls[0];  
+		var lastFocusableEl = focusableEls[focusableEls.length - 1];
+		var KEYCODE_TAB = 9;
+
+		$('#site-navigation').on('keydown', function(e) {
+			var isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
+
+			if (!isTabPressed) { 
+				return; 
+			}
+
+			if ( e.shiftKey ) /* shift + tab */ {
+				if (document.activeElement === firstFocusableEl) {
+					lastFocusableEl.focus();
+					e.preventDefault();
+				}
+			}
+
+			else /* tab */ {
+				if (document.activeElement === lastFocusableEl) {
+					firstFocusableEl.focus();
+					e.preventDefault();
+				}
+			}
+	    });
+	}
 });
 
 /**
@@ -95,7 +130,7 @@ jQuery(document).ready(function($) {
 
 		if ( event.type === 'touchstart' ) {
 			const menuItem = this.parentNode;
-			event.preventDefault();
+			//event.preventDefault();
 			for ( const link of menuItem.parentNode.children ) {
 				if ( menuItem !== link ) {
 					link.classList.remove( 'focus' );

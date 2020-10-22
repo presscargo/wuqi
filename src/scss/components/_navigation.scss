@@ -18,8 +18,15 @@
 		position: relative;
 		margin: 0;
 
-		> span {
+		&.menu-item-has-children {
+			> a:not(.wuqi-dropdown-arrow) {
+				width: calc(100% - 56px);
+			}
+		}
+
+		a.wuqi-dropdown-arrow {
 			display: block;
+			flex: 0 0 56px;
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -39,6 +46,15 @@
 				border-color: $white;
 				transform: translateY(-75%) rotate(45deg);
 				cursor: pointer;
+				transition: transform 0.3s ease-in-out;
+				transform-origin: 65% 65%;
+			}
+
+			&.active {
+				&:after {
+					transform: translateY(-75%) rotate(225deg);
+					transition: transform 0.3s ease-in-out;
+				}
 			}
 
 			@media screen and (min-width: $nav-breakpoint) {

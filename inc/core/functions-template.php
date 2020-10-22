@@ -130,7 +130,7 @@ add_action( 'wp_head', 'wuqi_pingback_header' );
  */
 function wuqi_nav_menu_arrow( $item_output, $item, $depth, $args ) {
 	if ( in_array( 'menu-item-has-children', $item->classes ) ){
-        $item_output .= '<span class="wuqi-dropdown-arrow"></span>';
+        $item_output .= '<a href="#" class="wuqi-dropdown-arrow"></a>';
     }
 	return $item_output;
 }
