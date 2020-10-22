@@ -855,6 +855,12 @@ table th {
   width: calc(100% - 56px);
 }
 
+@media screen and (min-width: 1024px) {
+  .main-navigation li.menu-item-has-children > a:not(.wuqi-dropdown-arrow) {
+    width: auto;
+  }
+}
+
 .main-navigation li a.wuqi-dropdown-arrow {
   display: block;
   flex: 0 0 56px;

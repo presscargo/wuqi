@@ -17,6 +17,8 @@ jQuery(document).ready(function($) {
 		var KEYCODE_TAB = 9;
 
 		$('#site-navigation').on('keydown', function(e) {
+			if ( !$('body').hasClass('flyout-active') ) return;
+
 			var isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
 
 			if (!isTabPressed) { 

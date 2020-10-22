@@ -21,6 +21,10 @@
 		&.menu-item-has-children {
 			> a:not(.wuqi-dropdown-arrow) {
 				width: calc(100% - 56px);
+
+				@media screen and (min-width: $nav-breakpoint) {
+					width: auto;
+				}
 			}
 		}
 
