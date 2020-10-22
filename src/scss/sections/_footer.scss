@@ -1,0 +1,8 @@
+p.credit {
+	margin: 0;
+	font-size: 0.8rem;
+
+	@media screen and (min-width: $large) {
+		font-size: 1rem;
+	}
+}

@@ -66,7 +66,11 @@
 }
 
 .footer-widgets-wrap {
-	padding: $global-padding * 2 $global-padding * 3;
+	padding: $global-padding * 2 $global-padding;
+
+	@media screen and (min-width: $large) {
+		padding: $global-padding * 2 $global-padding * 3;
+	}
 
 	.sidebar {
 		flex: 0 0 100%;
@@ -86,7 +90,11 @@
 }
 
 .footer-wrap {
-	padding: $global-padding $global-padding * 3;
+	padding: $global-padding;
+
+	@media screen and (min-width: $large) {
+		padding: $global-padding $global-padding * 3;
+	}
 
 	.colophon {
 		padding: $global-padding;
@@ -161,7 +169,11 @@
 
 .primary-wrap {
 	background-color: $white;
-	padding: $global-padding * 2 $global-padding * 3;
+	padding: $global-padding * 2 $global-padding;
+
+	@media (min-width: $large) {
+		padding: $global-padding * 2 $global-padding * 3;
+	}
 }
 
 #content-secondary {

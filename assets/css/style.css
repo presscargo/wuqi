@@ -2,7 +2,7 @@
  * Theme Name:  Wuqi
  * Theme URI:   https://presscargo.io/themes/wuqi
  * Description: Wuqi is a clean and simple theme for blogging and writing. It features bold typography and room for your featured images. You can pick between a two-column or a one-column layout. Individual post and pages layouts are also possible. It also comes with custom header support.
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      Press Cargo
  * Author URI:  https://presscargo.io
  * Tags:        one-column, two-columns, custom-menu, featured-images, right-sidebar, post-formats, sticky-post, threaded-comments, translation-ready, blog
@@ -1210,7 +1210,13 @@ body.flyout-active {
 }
 
 .footer-widgets-wrap {
-  padding: 2rem 3rem;
+  padding: 2rem 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-widgets-wrap {
+    padding: 2rem 3rem;
+  }
 }
 
 .footer-widgets-wrap .sidebar {
@@ -1232,7 +1238,13 @@ body.flyout-active {
 }
 
 .footer-wrap {
-  padding: 1rem 3rem;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-wrap {
+    padding: 1rem 3rem;
+  }
 }
 
 .footer-wrap .colophon {
@@ -1309,7 +1321,13 @@ body.flyout-active {
 
 .primary-wrap {
   background-color: #ffffff;
-  padding: 2rem 3rem;
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 1024px) {
+  .primary-wrap {
+    padding: 2rem 3rem;
+  }
 }
 
 #content-secondary {
@@ -1362,6 +1380,17 @@ figure.site-custom-header {
 
 figure.site-custom-header img {
   visibility: hidden;
+}
+
+p.credit {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 1024px) {
+  p.credit {
+    font-size: 1rem;
+  }
 }
 
 /* Content
@@ -1576,10 +1605,11 @@ li.bypostauthor article {
 
 .comment-form-cookies-consent {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .comment-form-cookies-consent input {
+  margin-top: 0.125rem;
   margin-right: 0.375rem;
 }
 

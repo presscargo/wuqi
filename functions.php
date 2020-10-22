@@ -82,7 +82,7 @@ final class Wuqi {
 
 		/* Define Constants. */
 		// Theme Version
-		define( 'WUQI_VERSION', '1.0.0' );
+		define( 'WUQI_VERSION', '1.0.1' );
 
 		// Settings
 		define( 'WUQI_SETTINGS', 'wuqi-settings' );

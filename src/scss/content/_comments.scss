@@ -119,9 +119,10 @@ li.bypostauthor {
 
 .comment-form-cookies-consent {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 
 	input {
+		margin-top: rem(2);
 		margin-right: rem(6);
 	}
 
