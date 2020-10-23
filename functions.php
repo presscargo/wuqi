@@ -4,10 +4,10 @@
  *
  * @package    Wuqi
  * @subpackage Functions
- * @version    1.0.0
+ * @version    1.0.1
  * @author     David Sutoyo <david@smallharbor.com>
  * @copyright  Copyright (c) 2020, David Sutoyo
- * @link       https://github.com/dsutoyo/wuqiwp
+ * @link       https://github.com/presscargo/wuqi
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -125,7 +125,7 @@ final class Wuqi {
 	private function setup_actions() {
 
 		// Theme setup.
-		add_action( 'after_setup_theme', array( $this, 'theme_setup' ),  5 );
+		add_action( 'after_setup_theme', array( $this, 'theme_setup' ), 5 );
 
 		// Register menus.
 		add_action( 'init', array( $this, 'register_menus' ) );
