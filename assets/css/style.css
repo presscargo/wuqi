@@ -1226,8 +1226,8 @@ body.flyout-active {
 
 @media screen and (min-width: 1024px) {
   .footer-widgets-wrap .sidebar {
-    flex: 0 0 31.3%;
-    width: 31.3%;
+    flex: 0 0 33.3333%;
+    width: 33.3333%;
   }
 }
 
