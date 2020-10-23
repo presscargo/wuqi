@@ -1215,7 +1215,7 @@ body.flyout-active {
 
 @media screen and (min-width: 1024px) {
   .footer-widgets-wrap {
-    padding: 2rem 3rem;
+    padding: 2rem 2.5rem;
   }
 }
 
@@ -1927,7 +1927,7 @@ li.bypostauthor article {
 }
 
 .footer-widgets-wrap .widget {
-  margin: 1rem;
+  margin: 1.5rem;
 }
 
 .footer-widgets-wrap .widget input[type="text"],

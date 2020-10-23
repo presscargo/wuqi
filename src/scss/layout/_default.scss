@@ -69,7 +69,7 @@
 	padding: $global-padding * 2 $global-padding;
 
 	@media screen and (min-width: $large) {
-		padding: $global-padding * 2 $global-padding * 3;
+		padding: $global-padding * 2 $global-padding * 2.5;
 	}
 
 	.sidebar {
