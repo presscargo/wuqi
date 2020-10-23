@@ -31,9 +31,18 @@ More details [here](http://www.gnu.org/licenses/gpl-2.0.html).
 
 = 1.0.0 =
 
-Release date:
+Release date: October 6, 2020
 
 * Initial release
+
+= 1.0.1 =
+
+Release date: October 23, 2020
+
+* Accessibility improvements for the mobile menu
+* Fix skip link
+* Add starter content support
+* Escape theme strings
 
 == Resources ==
 beach-landscape-sea-water-nature-sand-1061645-pxhere.com.jpg https://pxhere.com/en/photo/1061645, © pxhere.com CC0, https://creativecommons.org/publicdomain/zero/1.0/
