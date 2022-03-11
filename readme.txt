@@ -2,9 +2,9 @@
 Contributors: presscargo
 Tags: one-column, two-columns, custom-menu, featured-images, right-sidebar, post-formats, sticky-post, threaded-comments, translation-ready, blog
 Requires at least: 4.5
-Tested up to: 5.5.1
+Tested up to: 5.9.2
 Requires PHP: 5.6
-Stable tag: 1.0.3
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,11 +29,12 @@ More details [here](http://www.gnu.org/licenses/gpl-2.0.html).
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0.2 =
 
-Release date: October 6, 2020
+Release date: March 11, 2022
 
-* Initial release
+* Update Kirki to version 4
+* Add Customizer support for changing mobile header background color and text color
 
 = 1.0.1 =
 
@@ -43,6 +44,12 @@ Release date: October 23, 2020
 * Fix skip link
 * Add starter content support
 * Escape theme strings
+
+= 1.0.0 =
+
+Release date: October 6, 2020
+
+* Initial release
 
 == Resources ==
 beach-landscape-sea-water-nature-sand-1061645-pxhere.com.jpg https://pxhere.com/en/photo/1061645, © pxhere.com CC0, https://creativecommons.org/publicdomain/zero/1.0/
