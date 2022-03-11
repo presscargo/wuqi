@@ -9,14 +9,8 @@ if ( ! class_exists( 'Kirki' ) ) {
 	return;
 }
 
-// Config
-Kirki::add_config( 'wuqi', array(
-	'capability'    => 'edit_theme_options',
-	'option_type'   => 'theme_mod',
-) );
-
 // Links
-Kirki::add_section( 'morelink', array(
+new \Kirki\Section( 'morelink', array(
 	'title'       => esc_html__( 'Press Cargo', 'wuqi' ),
 	'type'        => 'link',
 	'button_text' => esc_html__( 'View More Themes', 'wuqi' ),
@@ -24,7 +18,7 @@ Kirki::add_section( 'morelink', array(
 	'priority'    => 13,
 ) );
 
-Kirki::add_section( 'reviewlink', array(
+new \Kirki\Section( 'reviewlink', array(
 	'title'       => esc_html__( 'Like This Theme?', 'wuqi' ),
 	'panel'       => 'options',
 	'type'        => 'link',
@@ -40,20 +34,19 @@ Kirki::add_section( 'reviewlink', array(
  */
 
 // Panel
-Kirki::add_panel( 'content', array(
+new \Kirki\Panel( 'content', array(
 	'title'       => esc_html__( 'Content', 'wuqi' ),
 	'priority'    => 30,
 ) );
 
 // Section: General
-Kirki::add_section( 'general', array(
+new \Kirki\Section( 'general', array(
 	'priority'    => 10,
 	'title'       => esc_html__( 'General', 'wuqi' ),
 	'panel'       => 'content',
 ) );
 
-Kirki::add_field( 'wuqi', [
-	'type'        => 'radio',
+new \Kirki\Field\Radio( [
 	'settings'    => 'general_post_author',
 	'label'       => esc_html__( 'Post Author', 'wuqi' ),
 	'section'     => 'general',
@@ -66,14 +59,13 @@ Kirki::add_field( 'wuqi', [
 ] );
 
 // Section: Page Layout
-Kirki::add_section( 'page', array(
+new \Kirki\Section( 'page', array(
 	'priority'    => 20,
 	'title'       => esc_html__( 'Page Layout', 'wuqi' ),
 	'panel'       => 'content',
 ) );
 
-Kirki::add_field( 'wuqi', [
-	'type'        => 'radio-image',
+new \Kirki\Field\Radio_Image( [
 	'settings'    => 'page_layout',
 	'label'       => esc_html__( 'Page Layout', 'wuqi' ),
 	'section'     => 'page',
@@ -86,14 +78,13 @@ Kirki::add_field( 'wuqi', [
 ] );
 
 // Section: Blog Layout
-Kirki::add_section( 'blog', array(
+new \Kirki\Section( 'blog', array(
 	'priority'    => 30,
 	'title'       => esc_html__( 'Blog Layout', 'wuqi' ),
 	'panel'       => 'content',
 ) );
 
-Kirki::add_field( 'wuqi', [
-	'type'        => 'radio-image',
+new \Kirki\Field\Radio_Image( [
 	'settings'    => 'blog_layout',
 	'label'       => esc_html__( 'Blog Layout', 'wuqi' ),
 	'section'     => 'blog',
@@ -105,8 +96,7 @@ Kirki::add_field( 'wuqi', [
 	],
 ] );
 
-Kirki::add_field( 'wuqi', [
-	'type'        => 'radio',
+new \Kirki\Field\Radio( [
 	'settings'    => 'blog_post_display',
 	'label'       => esc_html__( 'Post Display', 'wuqi' ),
 	'section'     => 'blog',
@@ -118,8 +108,7 @@ Kirki::add_field( 'wuqi', [
 	],
 ] );
 
-Kirki::add_field( 'wuqi', [
-	'type'        => 'radio',
+new \Kirki\Field\Radio( [
 	'settings'    => 'blog_post_thumbnail',
 	'label'       => esc_html__( 'Post Thumbnail', 'wuqi' ),
 	'section'     => 'blog',
@@ -131,8 +120,7 @@ Kirki::add_field( 'wuqi', [
 	],
 ] );
 
-Kirki::add_field( 'wuqi', [
-	'type'        => 'radio',
+new \Kirki\Field\Radio( [
 	'settings'    => 'blog_post_first_thumbnail',
 	'label'       => esc_html__( 'Thumbnail of First Post', 'wuqi' ),
 	'section'     => 'blog',
@@ -145,14 +133,13 @@ Kirki::add_field( 'wuqi', [
 ] );
 
 // Section: Archive Layout
-Kirki::add_section( 'archive', array(
+new \Kirki\Section( 'archive', array(
 	'priority'    => 40,
 	'title'       => esc_html__( 'Archive Layout', 'wuqi' ),
 	'panel'       => 'content',
 ) );
 
-Kirki::add_field( 'wuqi', [
-	'type'        => 'radio-image',
+new \Kirki\Field\Radio_Image( [
 	'settings'    => 'archive_layout',
 	'label'       => esc_html__( 'Archive Layout', 'wuqi' ),
 	'section'     => 'archive',
@@ -164,8 +151,8 @@ Kirki::add_field( 'wuqi', [
 	],
 ] );
 
-Kirki::add_field( 'wuqi', [
-	'type'        => 'radio',
+new \Kirki\Field\Radio( [
+
 	'settings'    => 'archive_post_display',
 	'label'       => esc_html__( 'Post Display', 'wuqi' ),
 	'section'     => 'archive',
@@ -177,7 +164,7 @@ Kirki::add_field( 'wuqi', [
 	],
 ] );
 
-Kirki::add_field( 'wuqi', [
+new \Kirki\Field\Radio( [
 	'type'        => 'radio',
 	'settings'    => 'archive_post_thumbnail',
 	'label'       => esc_html__( 'Post Thumbnail', 'wuqi' ),
@@ -191,14 +178,13 @@ Kirki::add_field( 'wuqi', [
 ] );
 
 // Section: Post Layout
-Kirki::add_section( 'post', array(
+new \Kirki\Section( 'post', array(
 	'priority'    => 50,
 	'title'       => esc_html__( 'Post Layout', 'wuqi' ),
 	'panel'       => 'content',
 ) );
 
-Kirki::add_field( 'wuqi', [
-	'type'        => 'radio-image',
+new \Kirki\Field\Radio_Image( [
 	'settings'    => 'post_layout',
 	'label'       => esc_html__( 'Post Layout', 'wuqi' ),
 	'section'     => 'post',
@@ -208,4 +194,39 @@ Kirki::add_field( 'wuqi', [
 		'2c-l'   => get_template_directory_uri() . '/assets/images/layouts/2c-l.png',
 		'1c'     => get_template_directory_uri() . '/assets/images/layouts/1c.png',
 	],
+] );
+
+// Section: Colors
+// This is a preset section
+new \Kirki\Field\Color( [
+	'settings'    => 'header_mobile_bg_color',
+	'label'       => __( 'Mobile Header Background Color', 'wuqi' ),
+	'section'     => 'colors',
+	'default'     => '#000000',
+	'output'      => array(
+		array(
+			'element' => '.header-wrap',
+			'property' => 'background-color',
+			'media_query' => '@media (max-width: 1024px)'
+		)
+	)
+] );
+
+new \Kirki\Field\Color( [
+	'settings'    => 'header_mobile_text_color',
+	'label'       => __( 'Mobile Header Text Color', 'wuqi' ),
+	'section'     => 'colors',
+	'default'     => '#ffffff',
+	'output'      => array(
+		array(
+			'element' => '.site-header a',
+			'property' => 'color',
+			'media_query' => '@media (max-width: 1024px)'
+		),
+		array(
+			'element' => '.menu-toggle span, .menu-toggle span:before, .menu-toggle span:after',
+			'property' => 'background-color',
+			'media_query' => '@media (max-width: 1024px)'
+		)
+	)
 ] );

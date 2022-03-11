@@ -4,7 +4,7 @@
  *
  * @package    Wuqi
  * @subpackage Functions
- * @version    1.0.1
+ * @version    1.0.2
  * @author     David Sutoyo <david@smallharbor.com>
  * @copyright  Copyright (c) 2020, David Sutoyo
  * @link       https://github.com/presscargo/wuqi
