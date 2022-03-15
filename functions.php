@@ -4,7 +4,7 @@
  *
  * @package    Wuqi
  * @subpackage Functions
- * @version    1.0.2
+ * @version    1.0.3
  * @author     David Sutoyo <david@smallharbor.com>
  * @copyright  Copyright (c) 2020, David Sutoyo
  * @link       https://github.com/presscargo/wuqi
@@ -82,7 +82,7 @@ final class Wuqi {
 
 		/* Define Constants. */
 		// Theme Version
-		define( 'WUQI_VERSION', '1.0.1' );
+		define( 'WUQI_VERSION', '1.0.3' );
 
 		// Settings
 		define( 'WUQI_SETTINGS', 'wuqi-settings' );

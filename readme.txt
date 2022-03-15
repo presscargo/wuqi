@@ -29,6 +29,12 @@ More details [here](http://www.gnu.org/licenses/gpl-2.0.html).
 
 == Changelog ==
 
+= 1.0.3 =
+
+Release date: March 14, 2022
+
+* Add Kirki files that were missing
+
 = 1.0.2 =
 
 Release date: March 11, 2022
